@@ -50,13 +50,13 @@
     <Compile Include="Characters\Spellcasters\Mage.cs" />
     <Compile Include="Characters\Spellcasters\Necromancer.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="Equipment\Armors\Chainlink.cs" />
-    <Compile Include="Equipment\Armors\ClothRobe.cs" />
-    <Compile Include="Equipment\Armors\LightLeatherVest.cs" />
-    <Compile Include="Equipment\Weapons\Axe.cs" />
-    <Compile Include="Equipment\Weapons\Hammer.cs" />
-    <Compile Include="Equipment\Weapons\Staff.cs" />
-    <Compile Include="Equipment\Weapons\Sword.cs" />
+    <Compile Include="Equipment\Armors\Heavy\Chainlink.cs" />
+    <Compile Include="Equipment\Armors\Light\ClothRobe.cs" />
+    <Compile Include="Equipment\Armors\Leather\LightLeatherVest.cs" />
+    <Compile Include="Equipment\Weapons\Sharp\Axe.cs" />
+    <Compile Include="Equipment\Weapons\Blunt\Hammer.cs" />
+    <Compile Include="Equipment\Weapons\Blunt\Staff.cs" />
+    <Compile Include="Equipment\Weapons\Sharp\Sword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

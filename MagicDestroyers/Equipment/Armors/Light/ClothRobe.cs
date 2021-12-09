@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Equipment.Armors
+namespace MagicDestroyers.Equipment.Armors.light
 {
-    class LightLeatherVest
+    class ClothRobe
     {
         private int armorPoints;
+        public ClothRobe()
+        {
+        }
     }
 }

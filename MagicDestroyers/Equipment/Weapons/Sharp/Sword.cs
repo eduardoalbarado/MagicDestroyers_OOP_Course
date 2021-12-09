@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Equipment.Weapons
+namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
     class Sword
     {
         private int damage;
+        public Sword()
+        {
+        }
+
         public void Bloodthirst()
         {
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Equipment.Armors
+namespace MagicDestroyers.Equipment.Armors.Heavy
 {
 
     class Chainlink
     {
         private int armorPoints;
+
+        public Chainlink()
+        {
+        }
     }
 }

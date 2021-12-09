@@ -1,5 +1,5 @@
-﻿using MagicDestroyers.Equipment.Armors;
-using MagicDestroyers.Equipment.Weapons;
+﻿using MagicDestroyers.Equipment.Armors.Heavy;
+using MagicDestroyers.Equipment.Weapons.Blunt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +18,24 @@ namespace MagicDestroyers.Characters.Melee
 
         private Chainlink bodyArmor;
         private Hammer weapon;
+
+        public Knight()
+        {
+        }
+
         public void HolyBlow()
         {
+            throw new NotImplementedException();
         }
 
         public void PurifySoul()
         {
+            throw new NotImplementedException();
         }
 
         public void RighteousWings()
         {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using MagicDestroyers.Equipment.Armors;
-using MagicDestroyers.Equipment.Weapons;
+﻿using MagicDestroyers.Equipment.Armors.Heavy;
+using MagicDestroyers.Equipment.Weapons.Sharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +18,25 @@ namespace MagicDestroyers.Characters.Melee
 
         private Chainlink bodyArmor;
         private Axe weapon;
+
+        public Warrior()
+        {
+
+        }
+
         public void Strike()
         {
+            throw new NotImplementedException();
         }
 
         public void Execute()
         {
+            throw new NotImplementedException();
         }
 
         public void SkinHarden()
         {
+            throw new NotImplementedException();
         }
     }
 }

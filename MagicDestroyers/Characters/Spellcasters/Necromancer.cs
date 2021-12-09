@@ -12,16 +12,24 @@ namespace MagicDestroyers.Characters.Spellcasters
     {
         private LightLeatherVest bodyArmor;
         private Sword weapon;
+
+        public Necromancer()
+        {
+        }
+
         public void ShadowRage()
         {
+            throw new NotImplementedException();
         }
 
         public void VampireTouch()
         {
+            throw new NotImplementedException();
         }
 
         public void BoneShield()
         {
+            throw new NotImplementedException();
         }
     }
 }

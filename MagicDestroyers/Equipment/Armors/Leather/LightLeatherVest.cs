@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Equipment.Weapons
+namespace MagicDestroyers.Equipment.Armors.Leather
 {
-    class Staff
+    class LightLeatherVest
     {
-        private int damage;
-        public void Empower()
+        private int armorPoints;
+
+        public LightLeatherVest()
         {
         }
     }
