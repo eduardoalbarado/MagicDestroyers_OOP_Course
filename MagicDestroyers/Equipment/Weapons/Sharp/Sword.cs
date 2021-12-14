@@ -12,7 +12,24 @@ namespace MagicDestroyers.Equipment.Weapons.Sharp
         public Sword()
         {
         }
-
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+            set
+            {
+                if (value >= 1)
+                {
+                    damage = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 100.");
+                }
+            }
+        }
         public void Bloodthirst()
         {
             throw new NotImplementedException();
