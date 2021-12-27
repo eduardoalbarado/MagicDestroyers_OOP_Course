@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    class Warrior : Melee
+    public class Warrior : Melee
     {
         private const string DEFAULT_NAME = "";
         private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;

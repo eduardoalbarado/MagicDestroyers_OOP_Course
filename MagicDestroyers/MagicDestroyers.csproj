@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Interface\IAttack.cs" />
+    <Compile Include="Characters\Interface\IDefend.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Knight.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />
@@ -66,6 +68,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
