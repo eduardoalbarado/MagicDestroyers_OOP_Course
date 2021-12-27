@@ -1,4 +1,5 @@
-﻿using MagicDestroyers.Equipment.Armors.Leather;
+﻿using MagicDestroyers.Enums;
+using MagicDestroyers.Equipment.Armors.Leather;
 using MagicDestroyers.Equipment.Weapons.Sharp;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,13 @@ namespace MagicDestroyers.Characters.Spellcasters
 {
     class Necromancer
     {
+        private const string DEFAULT_NAME = "";
+        private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;
         private int abilityPoints;
         private int healthPoints;
         private int level;
 
-        private string faction;
+        private Faction faction;
         private string name;
 
         private LightLeatherVest bodyArmor;
@@ -29,13 +32,13 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
             set
             {
-                if (value >= 0 && value <= 100)
+                if (value >= 0 && value <= 15)
                 {
                     abilityPoints = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 10.");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 15.");
                 }
             }
         }
@@ -94,7 +97,7 @@ namespace MagicDestroyers.Characters.Spellcasters
                 }
             }
         }
-        public string Faction
+        public Faction Faction
         {
             get
             {
@@ -102,14 +105,7 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
             set
             {
-                if (value == "Melee" || value == "Spellcaster")
-                {
-                    faction = value;
-                }
-                else
-                {
-                    throw new ArgumentException(string.Empty, "The faction should be either Melee or Spellcaster");
-                }
+                this.faction = value;
             }
         }
 

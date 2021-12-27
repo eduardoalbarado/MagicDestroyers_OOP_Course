@@ -1,4 +1,5 @@
-﻿using MagicDestroyers.Equipment.Armors.Heavy;
+﻿using MagicDestroyers.Enums;
+using MagicDestroyers.Equipment.Armors.Heavy;
 using MagicDestroyers.Equipment.Weapons.Sharp;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,10 @@ namespace MagicDestroyers.Characters.Melee
 {
     class Warrior
     {
+        private const string DEFAULT_NAME = "";
+        private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;
         private int abilityPoints;
-        private string faction;
+        private Faction faction;
         private int healthPoints;
         private int level;
         private string name;
@@ -27,7 +30,7 @@ namespace MagicDestroyers.Characters.Melee
             }
             set
             {
-                if (value >= 0 && value <= 100)
+                if (value >= 0 && value <= 10)
                 {
                     this.abilityPoints = value;
                 }
@@ -92,7 +95,7 @@ namespace MagicDestroyers.Characters.Melee
                 }
             }
         }
-        public string Faction
+        public Faction Faction
         {
             get
             {
@@ -100,14 +103,7 @@ namespace MagicDestroyers.Characters.Melee
             }
             set
             {
-                if (value == "Melee" || value == "Spellcaster")
-                {
                     this.faction = value;
-                }
-                else
-                {
-                    throw new ArgumentException(string.Empty, "The faction should be either Melee or Spellcaster");
-                }
             }
         }
 
