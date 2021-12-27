@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Spellcasters
 {
-    class Mage
+    class Mage : Spellcaster
     {
         private const string DEFAULT_NAME = "";
         private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;
-        private int abilityPoints;
         private int healthPoints;
         private int level;
 
@@ -23,24 +22,7 @@ namespace MagicDestroyers.Characters.Spellcasters
         private ClothRobe bodyArmor;
         private Staff weapon;
 
-        public int AbilityPoints
-        {
-            get
-            {
-                return abilityPoints;
-            }
-            set
-            {
-                if (value >= 0 && value <= 20)
-                {
-                    abilityPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 20.");
-                }
-            }
-        }
+
         public int HealthPoints
         {
             get

@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    class Knight
+    class Knight: Melee
     {
         private const string DEFAULT_NAME = "";
         private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;
-        private int abilityPoints;
         private Faction faction;
         private int healthPoints;
         private int level;
@@ -22,24 +21,6 @@ namespace MagicDestroyers.Characters.Melee
         private Chainlink bodyArmor;
         private Hammer weapon;
 
-        public int AbilityPoints
-        {
-            get
-            {
-                return abilityPoints;
-            }
-            set
-            {
-                if (value >= 0 && value <= 20)
-                {
-                    abilityPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 20.");
-                }
-            }
-        }
         public int HealthPoints
         {
             get
