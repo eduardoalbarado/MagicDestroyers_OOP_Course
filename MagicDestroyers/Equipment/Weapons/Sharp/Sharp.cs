@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Characters.Interfaces
+namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
-    public interface IDefend
+    public abstract class Sharp : Weapon
     {
-        int Defend();
     }
 }
-

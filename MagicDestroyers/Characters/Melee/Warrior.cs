@@ -11,82 +11,17 @@ namespace MagicDestroyers.Characters.Melee
 {
     public class Warrior : Melee
     {
-        private const string DEFAULT_NAME = "";
-        private readonly Faction DEFAULT_FACTION = Enums.Faction.Melee;
-        private Faction faction;
-        private int healthPoints;
-        private int level;
-        private string name;
+        private const Faction DEFAULT_FACTION = Faction.Melee;
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_HEALTH_POINTS = 120;
+        private const int DEFAULT_ABILITY_POINTS = 100;
+        private const string DEFAULT_NAME = "Bob";
+
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
+        private readonly Axe DEFAULT_WEAPON = new Axe();
 
         private Chainlink bodyArmor;
         private Axe weapon;
-
-        public int HealthPoints
-        {
-            get
-            {
-                return this.healthPoints;
-            }
-            set
-            {
-                if (value >= 0 && value <= 120)
-                {
-                    this.healthPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 120.");
-                }
-            }
-        }
-        public int Level
-        {
-            get
-            {
-                return this.level;
-            }
-            set
-            {
-                if (value >= 0)
-                {
-                    this.healthPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, level should always be positive.");
-                }
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                if (value.Length >= 3 && value.Length <= 12)
-                {
-                    this.name = value;
-                }
-                else
-                {
-                    throw new ArgumentException(string.Empty, "Inappropriate length of name, name should be between 3 and 12 characters.");
-                }
-            }
-        }
-        public Faction Faction
-        {
-            get
-            {
-                return this.faction;
-            }
-            set
-            {
-                    this.faction = value;
-            }
-        }
 
         public Chainlink BodyArmor
         {
@@ -112,8 +47,24 @@ namespace MagicDestroyers.Characters.Melee
         }
 
         public Warrior()
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
+        }
 
+        public Warrior(string name, int level)
+            : this(name, level, DEFAULT_HEALTH_POINTS)
+        {
+        }
+
+        public Warrior(string name, int level, int healthPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
+            this.Faction = DEFAULT_FACTION;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void Strike()

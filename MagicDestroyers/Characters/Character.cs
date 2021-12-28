@@ -1,4 +1,4 @@
-﻿using MagicDestroyers.Characters.Interface;
+﻿using MagicDestroyers.Characters.Interfaces;
 using MagicDestroyers.Enums;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters
 {
-    public abstract class Character: IAttack, IDefend
+    public class Character
     {
         private Faction faction;
 
@@ -85,11 +85,5 @@ namespace MagicDestroyers.Characters
                 }
             }
         }
-
-        public abstract void Attack();
-
-        public abstract void Defend();
-
-        public abstract void SpecialAttack();
     }
 }

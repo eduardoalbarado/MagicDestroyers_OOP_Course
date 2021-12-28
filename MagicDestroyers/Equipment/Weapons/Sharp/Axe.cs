@@ -6,31 +6,25 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
-    class Axe
+    public class Axe : Sharp
     {
-        private int damage;
+        private const int DEFAULT_DAMAGE_POINTS = 10;
 
         public Axe()
+            : this(DEFAULT_DAMAGE_POINTS)
         {
         }
-        public int Damage
+
+        public Axe(int armorPoints)
         {
-            get
-            {
-                return damage;
-            }
-            set
-            {
-                if (value >= 1)
-                {
-                    damage = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 100.");
-                }
-            }
+            this.DamagePoints = armorPoints;
         }
+
+        public override void SpecialAbility()
+        {
+            this.HackNSlash();
+        }
+
         public void HackNSlash()
         {
             throw new NotImplementedException();

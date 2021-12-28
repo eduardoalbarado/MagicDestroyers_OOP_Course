@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Characters.Interfaces
+namespace MagicDestroyers.Equipment.Armors.Heavy
 {
-    public interface IDefend
+    public abstract class Heavy : Armor
     {
-        int Defend();
+
     }
 }
-
