@@ -15,6 +15,7 @@ namespace MagicDestroyers.Characters
 
         private int healthPoints;
         private int level;
+        private int scores;
 
         private string name;
 
@@ -83,6 +84,19 @@ namespace MagicDestroyers.Characters
                 {
                     throw new ArgumentException(string.Empty, "Inappropriate length of name, name should be between 3 and 12 characters.");
                 }
+            }
+        }
+
+        public int Scores
+        {
+            get
+            {
+                return this.scores;
+            }
+
+            set
+            {
+                this.scores = value;
             }
         }
     }
